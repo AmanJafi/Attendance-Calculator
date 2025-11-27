@@ -1,0 +1,40 @@
+<html>
+<head>
+    <title>Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="calculator.js" defer></script>
+    <style>
+        input{
+            width: 300px;
+            height: 50px;
+        }
+        button{
+            width:425px;
+        }
+        select{
+            height:50px;
+        }
+        h1{
+            margin-bottom:10px;
+        }
+        body{
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="background"></div>
+    <h1>Choose Subject</h1>
+        <select id="selectedsubject">
+            <option>ICS112</option>
+            <option>ICS111</option>
+            <option>IMA111</option>
+            <option>IHS111</option>
+            <option>IHS112</option>
+            <option>IEC112</option>
+        </select><input type="submit" value="CALCULATE" class="titlescreen" onclick="findsub()"><br>
+        <button style="width:425px;" class="titlescreen" onclick="window.location.href='Home.html'">BACK HOME</button>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,79 @@
+@font-face {
+    font-family: "Minecraft";
+    src: url("fonts/Minecrafter.Reg.ttf");
+}
+
+.background{
+    width: 100vw; 
+    height: 100vh;
+    background-image: url('image.jpg');
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: top left; 
+    animation: moveBackground 5s linear infinite alternate; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    pointer-events: auto;
+}
+@keyframes moveBackground {
+    0% {
+        background-position: top left;
+    }
+    100% {
+        background-position: bottom right; 
+    }
+}
+
+.titlescreen{
+    background-color: rgb(159, 157, 157);
+    border: 1px solid rgb(216, 214, 214);
+    font-size: 30px;
+    color: white;
+    font-family: "Minecraft";
+    padding-top:10px;
+    font-weight: 100;
+    -webkit-text-stroke: 0px;
+    text-shadow: 1px 1px 1px black;
+    margin-top:100px;
+    margin-left: 50px; 
+}
+body {
+    
+    text-align: center;
+
+}
+
+h1{
+    margin:50px;
+    color: rgb(159, 157, 157);
+    font-family: "Minecraft";
+    font-size: 150px;
+    text-shadow: 5px 5px 0px black,
+    10px 10px 0px black,
+    15px 15px 0px black;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+}
+
+select{
+    background-color: rgb(159, 157, 157);
+    width:200px;
+    height:46px;
+    font-size: 35px;
+    color: white;
+    text-align-last:center;
+    font-family: "Minecraft";
+    -webkit-text-stroke: 0px;
+    text-shadow: 1px 1px 1px black;
+    text-align: center;
+    padding-bottom:0px;
+}
+
+.titlescreen:hover{
+    background-color: gray;
+    color: lightgray;
+}
+
+
