@@ -6,6 +6,16 @@ const credits = {
     IHS112: 1,
     IEC111: 5
 };
+
+const translation ={
+    IHS111: "COMMUNICATION SKILLS",
+    ICS112: "COMPUTER PROGRAMMING",
+    ICS111: "IT WORKSHOP",
+    IMA111: "DISCRETE MATHEMATICS",
+    IHS112: "FOREIGN LANGUAGE",
+    IEC111: "ELECTRONIC CIRCUITS"
+}
+
 const totalClassesTaken = {
     ICS111: 54,
     ICS112: 49,
@@ -45,8 +55,9 @@ function findsub() {
 
 document.getElementById("final").innerHTML = (`
 <table border="2" cellpadding="5px" align="center">
-    <tr><th>Current Attendance</th><th>Classes Attended</th><th>Future Classes</th><th>More Classes Required</th><th>Missable</th></tr>
-    <tr><td>${percentage}%</td><td>${attended.toFixed(0)}</td><td>${future}</td><td>${future-x}</td><td>${x}</td></tr>
+    <tr><th colspan="5"><b>${translation[subject]}</b></th></tr>
+    <tr><th><b>Current Attendance</b></th><th><b>Classes Attended</b></th><th><b>Future Classes</b></th><th><b>More Classes Required</b></th><th><b>Missable</b></th></tr>
+    <tr><td><b>${percentage}%</b></td><td><b>${attended.toFixed(0)}</b></td><td><b>${future}</b></td><td><b>${future-x}</b></td><td><b>${x}</b></td></tr>
 </table>
     `);
 }
