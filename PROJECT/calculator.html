@@ -1,77 +1,88 @@
 <html>
+
 <head>
     <title>Calculator</title>
     <link rel="stylesheet" href="styles.css">
     <script src="calculator.js" defer></script>
     <style>
-        table th, table td {
+        table th,
+        table td {
             font-family: monospace;
             font-size: 45px;
-            color: white ;
+            color: white;
             text-align: center;
             text-shadow: none;
             -webkit-text-stroke: 1px;
             -webkit-text-stroke-color: black;
 
         }
-        input{
+
+        input {
             width: 200px;
             height: 60px;
             font-family: "Minecraft";
             text-align: center;
         }
-        button{
+
+        button {
             font-family: "Minecraft";
-            width:425px;
+            width: 425px;
         }
-        select{
+
+        select {
             font-family: "Minecraft";
             height: 60px;
             width: 250px;
-            
-        }
-        h1{
-            margin-bottom:10px;
-        }
-        body{
-            align-items: center;
-        }
-        select:hover{
-            background-color: gray;
-        }
-        select::placeholder{
-            color:white;
+
         }
 
+        h1 {
+            margin-bottom: 10px;
+        }
+
+        body {
+            align-items: center;
+        }
+
+        select:hover {
+            background-color: gray;
+        }
+
+        select::placeholder {
+            color: white;
+        }
     </style>
 </head>
+
 <body>
     <div class="background"></div>
     <h1>calculator</h1>
-        <select id="selectedsubject" style="margin-top: 50px;">
-            <option>ICS112</option>
-            <option>ICS111</option>
-            <option>IMA111</option>
-            <option>IHS111</option>
-            <option>IHS112</option>
-            <option>IEC111</option>
-        </select>
-            <input class="titlescreen" type="number" id="percentage" style="width: auto;height: 50px;margin-top: 50px;" placeholder="Your Attendance %">
-            <input type="submit" class="titlescreen" id="subsub" value="Calculate" style="margin-top: 50px;">
-            <div id="final" style="margin-top: 90px;"></div>
-        <button style="width:425px;" class="titlescreen" onclick="window.location.href='Home.html'" >BACK HOME</button>
-        <script>
-            document.getElementById("selectedsubject").addEventListener("change", () => {
-                document.getElementById("final").innerHTML = "";
-                document.getElementById("percentage").value = "";
-            });
-            document.getElementById("subsub").addEventListener("click", () => {
+    <select id="selectedsubject" style="margin-top: 50px;">
+        <option>ICS122</option>
+        <option>ICS121</option>
+        <option>IMA121</option>
+        <option>IHS121</option>
+        <option>ICS123</option>
+        <option>IEC121</option>
+    </select>
+    <input class="titlescreen" type="number" id="percentage" style="width: auto;height: 50px;margin-top: 50px;"
+        placeholder="Your Attendance %">
+    <input type="submit" class="titlescreen" id="subsub" value="Calculate" style="margin-top: 50px;">
+    <div id="final" style="margin-top: 90px;"></div>
+    <button style="width:425px;" class="titlescreen" onclick="window.location.href='Home.html'">BACK HOME</button>
+    <script>
+        document.getElementById("selectedsubject").addEventListener("change", () => {
+            document.getElementById("final").innerHTML = "";
+            document.getElementById("percentage").value = "";
+        });
+        document.getElementById("subsub").addEventListener("click", () => {
             const subject = document.getElementById("selectedsubject").value;
             localStorage.setItem("subject", subject);
             findsub();
-            });
+        });
 
-        </script>
+    </script>
     </div>
 </body>
+
 </html>
